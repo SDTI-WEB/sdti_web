@@ -1,0 +1,215 @@
+            .form {
+                width: 100%;
+            }
+
+            .form label {
+                font-size: 16px;
+                font-weight: 800;
+                line-height: 40px;
+                letter-spacing: 1px;
+                color: #454545;
+            }
+
+            .form_text {
+                position: relative;
+                margin: 0 0 36px;
+            }
+
+            .form_select {
+                position: relative;
+                margin: 0 0 36px;
+            }
+
+            .form_textarea {
+                margin: 0 0 36px;
+            }
+
+            .form_textarea label {
+                margin: 0 0 12px;
+            }
+
+            .form_textarea textarea {
+                width: 100%;
+                height: 140px;
+                font-size: 16px;
+                font-weight: 800;
+                line-height: 25px;
+                letter-spacing: 1px;
+                color: #454545;
+                resize: none;
+                outline: 0;
+                padding: 8px;
+                border: 1px solid #454545;
+                box-sizing: border-box;
+            }
+
+            .form_text label {
+                position: absolute;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                transition: .6s;
+            }
+
+            .form_text input[type=text] {
+                width: 100%;
+                height: 42px;
+                padding: 0 0 0 8px;
+                box-sizing: border-box;
+                border: 0;
+                outline: 0;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                border-bottom: 1px solid #454545;
+                font-size: 16px;
+                font-weight: 800;
+                line-height: 42px;
+                letter-spacing: 1px;
+                color: #045ead;
+                background: transparent;
+            }
+
+            .form_text span {
+                width: 0;
+                height: 100%;
+                border-bottom: 1px solid #045ead;
+                position: absolute;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                transition: .6s;
+            }
+
+            .form_select label {
+                width: 30%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .form_select select {
+                width: 70%;
+                height: 42px;
+                box-sizing: border-box;
+                border: 0;
+                border-bottom: 1px solid #70c0c9;
+                outline: 0;
+                /* -webkit-appearance: none; */
+                /*-moz-appearance: none;*/
+                font-size: 16px;
+                font-weight: 800;
+                line-height: 42px;
+                letter-spacing: 1px;
+                color: #70c0c9;
+                background: transparent;
+                vertical-align: middle;
+                cursor:pointer
+            }
+
+            .form_select select option {
+                font-weight: 800;
+		font-size: 14px; 
+            }
+
+            /*
+            .form_select::after {
+                content: '';
+                width: 8px;
+                height: 8px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                right: 12px;
+                border-right: 2px solid #70c0c9;
+                border-bottom: 2px solid #70c0c9;
+                transform: rotate(45deg);
+            }*/
+
+            .form_text input:focus+label {
+                font-size: 12px;
+                transform: translateY(-36px);
+            }
+
+            .form_text input:focus~span {
+                width: 100%;
+            }
+
+            .form_text label.active {
+                font-size: 12px;
+                transform: translateY(-36px);
+            }
+
+            .form_text span.active {
+                width: 100%;
+            }
+
+            .btn_send {
+                text-align: center;
+            }
+
+            .btn_send .send_wrap {
+                width: 300px;
+                height: 42px;
+                display: inline-block;
+                position: relative;
+                transform: translateX(0);
+                transition: .6s;
+            }
+
+            .btn_send .send_wrap:hover {
+                transform: translateX(12px);
+            }
+
+            .btn_send .send_wrap::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: #045ead;
+                display: inline-block;
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: skew(-12deg);
+            }
+
+            .btn_send .send_wrap input {
+                width: 100%;
+                height: 42px;
+                border: 0;
+                outline: 0;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 42px;
+                letter-spacing: 2px;
+                color: #fff;
+                background: transparent;
+                cursor: pointer;
+            }
+
+            .g-recaptcha_wrap {
+                text-align: center;
+            }
+
+            .g-recaptcha {
+                display: inline-block;
+            }
+
+            @media screen and (max-width: 1023px) {
+                .form label {
+                    font-size: 14.5px;
+                }
+                .form_select select {
+                    font-size: 14.5px;
+                }
+                .btn_send .send_wrap {
+                    width: 80%;
+                    max-width: 300px;
+                }
+                @media screen and (min-width: 768px) {}
+                @media screen and (max-width: 360px) {
+                    .btn_send .send_wrap {
+                        width: 90%;
+                    }
+                }
+            }

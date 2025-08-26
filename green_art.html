@@ -590,17 +590,17 @@
 
     <script>
     	$(document).ready(function(){
-        	$('.single-item').slick({
-            	dots: true,
-            	autoplay: true,
-            	autoplaySpeed: 5000,
-            	arrows: true,
-            	prevArrow: $('.slick-prev'),
-            	nextArrow: $('.slick-next')
-        	});
+        	if (!$('.single-item').hasClass('slick-initialized')) {
+            	$('.single-item').slick({
+                	dots: true,
+                	autoplay: true,
+                	autoplaySpeed: 5000,
+                	arrows: true,
+                	prevArrow: $('.slick-prev'),
+                	nextArrow: $('.slick-next')
+            	});
+        	}
     	});
 	</script>
-
-
 
 </body></html>

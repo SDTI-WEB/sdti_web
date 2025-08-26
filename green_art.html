@@ -19,14 +19,21 @@
     <script src="./green_art_files/scroll.js"></script>
     <script src="./green_art_files/slick.min.js"></script>
 	<style>
-		.slick-prev, .slick-next {
-    	position: absolute !important;
-    	top: 50% !important;
-    	transform: translateY(-50%) !important;
-    	z-index: 10;
-    	opacity: 1 !important;
-    	transition: none !important;
-		}
+	.slick-prev,
+	.slick-next {
+	    position: absolute !important;
+	    top: 50% !important;
+	    transform: translateY(-50%) !important;
+	    z-index: 999 !important;
+	    opacity: 1 !important;
+	    transition: none !important;
+	}
+	.slick-prev {
+	    left: 10px !important;
+	}
+	.slick-next {
+	    right: 10px !important;
+	}
 	</style>
 </head>
 

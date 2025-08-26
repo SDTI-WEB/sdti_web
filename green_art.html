@@ -19,16 +19,16 @@
     <script src="./green_art_files/scroll.js"></script>
     <script src="./green_art_files/slick.min.js"></script>
 	<style>
-	    .single-item {
-	        position: relative;
-	    }
-	
-	    .slick-prev,
-	    .slick-next {
-			top: 80%;
-	        transform: translateY(-80%);
-	    }
+		.slick-prev, .slick-next {
+		    position: absolute !important;
+		    top: 80% !important;
+		    transform: translateY(-80%) !important;
+		    z-index: 10;
+		    opacity: 1 !important;
+		    transition: none !important;
+		}
 	</style>
+
 </head>
 
 <body>

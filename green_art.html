@@ -596,11 +596,30 @@
         </aside>
     </footer>
 
-    <script>
+    <!-- 可能有問題，測試一下 -->
+	<!--<script>
         $('.single-item').slick({
             dots: true,
         });
-    </script>
+    </script>-->
+
+
+	<script>
+		$(document).ready(function () {
+    		if ($('.single-item').length && $.fn.slick) {
+        		$('.single-item').slick({
+            		dots: true,
+            		autoplay: true,
+            		autoplaySpeed: 5000,
+            		arrows: false,
+            		prevArrow: $('.slick-prev'),
+            		nextArrow: $('.slick-next')
+        		});
+    		} else {
+        		console.warn('Slick element not found or slick.js not loaded');
+    		}
+		});
+	</script>
 
 
 

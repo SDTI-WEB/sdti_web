@@ -1,0 +1,138 @@
+            .accordion {
+                width: 100%;
+                margin: 0 0 36px;
+                overflow: hidden;
+            }
+
+            .accordion_title {
+                width: 100%;
+                position: relative;
+                margin: 0 0 36px;
+                cursor: pointer;
+            }
+
+            .accordion_title::before {
+                content: '';
+                width: 100%;
+                height: 10px;
+                background: #045ead;
+                position: absolute;
+                left: 0;
+                bottom: -16px;
+                transform: skewX(-12deg);
+            }
+
+            .accordion_title h2 {
+                font-size: 24px;
+                line-height: 36px;
+                letter-spacing: 5px;
+                color: #045ead;
+                display: inline-block;
+                position: relative;
+                padding: 0 60px 0 0;
+                box-sizing: border-box;
+            }
+
+            .accordion_title h2 span {
+                font-size: 15px;
+                letter-spacing: 1px;
+            }
+
+            .accordion_title a {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+
+            .accordion_title a p {
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 36px;
+                letter-spacing: 1px;
+                color: #045ead;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .accordion_title a span {
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 8px 0 0;
+                position: relative;
+                transform: rotateX(0);
+                transition: .8s;
+            }
+
+            .accordion.active .accordion_title a span {
+                transform: rotateX(180deg);
+            }
+
+            .accordion_title a span::before {
+                content: '';
+                width: 40%;
+                height: 40%;
+                position: absolute;
+                bottom: 4px;
+                right: 0;
+                left: 0;
+                margin: auto;
+                border-right: 2px solid #045ead;
+                border-bottom: 2px solid #045ead;
+                transform: rotate(45deg);
+            }
+
+            .accordion_title a span::after {
+                content: '';
+                width: 40%;
+                height: 40%;
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                left: 0;
+                margin: auto;
+                border-right: 2px solid #045ead;
+                border-bottom: 2px solid #045ead;
+                transform: rotate(45deg);
+            }
+
+            .accordion_detail {
+                max-height: 0;
+                opacity: 0;
+                transition: .6s linear max-height, .4s linear opacity;
+            }
+
+            .accordion.active .accordion_detail {
+                max-height: 200vh;
+                opacity: 1;
+            }
+
+            .accordion_detail img {
+                max-width: 200px;
+                margin: 12px 0;
+            }
+
+            @media screen and (max-width: 1023px) {
+                .accordion_title h2 {
+                    font-size: 21px;
+                    line-height: 32px;
+                    letter-spacing: 4px;
+                }
+                .accordion_title a p {
+                    font-size: 14.5px;
+                    line-height: 32px;
+                }
+                .accordion_detail {
+                    overflow: scroll;
+                }
+                .accordion_detail img {
+                    max-width: 100%;
+                }
+                @media screen and (min-width: 768px) {}
+                @media screen and (max-width: 360px) {
+                    .btn_send .send_wrap {
+                        width: 90%;
+                    }
+                }
+            }
